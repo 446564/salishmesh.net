@@ -16,12 +16,16 @@ body {
   color: #222;
 }
 
-body > * {
+body>* {
   --layout-spacing: max(8vh, 3rem);
   --max-width: 70ch;
   width: min(100%, var(--max-width));
   margin-left: auto;
   margin-right: auto;
+}
+
+nav h1 {
+  font-size: 2.4rem;
 }
 
 nav ul {
@@ -43,23 +47,23 @@ nav [aria-current="page"] {
 
 header,
 main,
-main > * + * {
+main>*+* {
   margin-top: var(--layout-spacing);
 }
 
-body > footer {
+body>footer {
   margin-top: auto;
   padding-top: var(--layout-spacing);
 }
 
-body > footer div {
+body>footer div {
   border-top: 1px solid #ccc;
   padding-top: 0.5em;
   font-size: 0.9rem;
   color: #767676;
 }
 
-article * + * {
+article *+* {
   margin-top: 1em;
 }
 
