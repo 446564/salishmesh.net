@@ -11,7 +11,7 @@ module.exports = function (eleventyConfig) {
     formats: ["webp", "jpeg"],
 
     // output image widths
-    widths: [680],
+    widths: [880],
 
     // optional, attributes assigned on <img> nodes override these values
     htmlOptions: {

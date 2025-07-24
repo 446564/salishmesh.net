@@ -18,7 +18,7 @@ body {
 
 body>* {
   --layout-spacing: max(8vh, 3rem);
-  --max-width: 70ch;
+  --max-width: 90ch;
   width: min(100%, var(--max-width));
   margin-left: auto;
   margin-right: auto;
@@ -67,13 +67,17 @@ article *+* {
   margin-top: 1em;
 }
 
+article>h2:first-child {
+  text-align: center;
+}
+
 /* Typography */
 :is(h1, h2, h3) {
   line-height: 1.2;
 }
 
 :is(h1, h2) {
-  max-width: 40ch;
+  max-width: 80ch;
 }
 
 :is(h2, h3):not(:first-child) {
@@ -94,18 +98,11 @@ a:focus {
 
 article img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   min-height: 20rem;
-  max-height: 40vh;
+  max-height: 50vh;
   object-fit: cover;
   margin: 2rem auto;
-}
-
-@supports (aspect-ratio: 1) {
-  article img {
-    max-height: unset;
-    aspect-ratio: 3/2;
-  }
 }
 
 /* Supporting Content */
