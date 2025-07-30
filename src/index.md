@@ -1,6 +1,8 @@
 ---
 title: Welcome
 layout: page.njk
+eleventyNavigation:
+  key: Home
 ---
 
 ## {{ meta.siteDescription }}

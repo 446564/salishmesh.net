@@ -41,7 +41,7 @@ nav ul li {
   padding: 0.5rem 1rem;
 }
 
-nav [aria-current="page"] {
+nav ul li.my-active-class {
   font-weight: bold;
 }
 

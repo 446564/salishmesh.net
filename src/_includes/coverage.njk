@@ -1,0 +1,18 @@
+<script>
+import("/assets/js/ol/dist/ol.js");
+import("/assets/js/ol/source/OSM.js");
+import("/assets/js/ol/layer/Tile.js");
+import("/assets/js/ol/View.js");
+const map = new Map({
+  target: 'map',
+  layers: [
+    new TileLayer({
+      source: new OSM(),
+    }),
+  ],
+  view: new ol.View({
+    center: [0, 0],
+    zoom: 2,
+  }),
+});
+ </script>
