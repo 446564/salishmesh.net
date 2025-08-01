@@ -20,7 +20,7 @@
 
   <footer>
     <div>
-      <p>&copy; {% year %} {{ meta.siteName }}{% if meta.authorName %} • {{ meta.authorName }}{% endif %}</p>
+      <p>&copy; {% year %} {{ meta.siteName }}{% if meta.authorName %} • {{ meta.authorName }}{% endif %} • <a href="/feed.xml" title="Rss feed">RSS Feed</a></p>
     </div>
   </footer>
   {% if page.url == '/coverage/' %}{% include "coverage.njk" %}{% endif %}

@@ -1,6 +1,7 @@
 ---
 title: Build a Simple Repeater
 layout: how-to.njk
+date: Last Modified
 permalink: /how-to/simple-repeater/
 eleventyNavigation:
   key: Simple Repeater

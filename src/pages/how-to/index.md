@@ -1,6 +1,7 @@
 ---
 title: How To Library
 layout: page.njk
+date: Last Modified
 eleventyNavigation:
   key: How-To
 ---
