@@ -1,0 +1,26 @@
+---
+layout: base.njk
+---
+<main>
+<nav>
+<ul>
+  {% set howToNav = collections.all | eleventyNavigation("How-To") %}
+
+      {%- for item in howToNav -%}
+        {%- if item.url -%}
+          {%- set isParent = item.url != '/' and item.url in page.url -%}
+          <li{% if isCurrent or isParent %} class="my-active-class"{% endif %}>
+            <a
+              href="{{ item.url }}"
+              {% if isCurrent %}aria-current="page"{% endif %}>
+              {{ item.title }}
+            </a>
+          </li>
+        {%- endif -%}
+      {%- endfor -%}
+  </ul>
+  </nav>
+  <article>
+    {{ content | safe }}
+  </article>
+</main>
