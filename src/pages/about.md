@@ -11,7 +11,7 @@ A community operated mesh radio network capable of running on solar or other ene
 
 You can checkout our friends over at [PugetMesh](https://pugetmesh.org/), we have a link to their mesh which really makes us one big family.
 
-- [MeshCore Homepage](https://meshcore.co.uk/)
+The mesh operates on [MeshCore](https://meshcore.co.uk/) firmware.
 
 ## What It Isn't
 
