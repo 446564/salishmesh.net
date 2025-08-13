@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ meta.siteName }}{% if page.url != '/' %} | {{ title }} {% endif %}</title>
   <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
-  {% if page.url == '/coverage/' %}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.6.0/ol.css">{% endif %}
+  {% if page.url == '/coverage/' %}
+  <script src="https://unpkg.com/maplibre-gl@^5.6.2/dist/maplibre-gl.js"></script>
+  <link href="https://unpkg.com/maplibre-gl@^5.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+  {% endif %}
 </head>
 <body>
 
@@ -23,6 +26,5 @@
       <p>&copy; {% year %} {{ meta.siteName }}{% if meta.authorName %} • {{ meta.authorName }}{% endif %} • <a href="/feed.xml" title="Rss feed">RSS Feed</a></p>
     </div>
   </footer>
-  {% if page.url == '/coverage/' %}{% include "coverage.njk" %}{% endif %}
 </body>
 </html>

@@ -1,15 +1,14 @@
-{% set currentUrl %}{{ page.url }}{% endset %}
 <nav>
 <ul>
 {% set topNav = collections.all | eleventyNavigation %}
 
     {%- for item in topNav -%}
       {%- if item.url -%}
-        {%- set isParent = item.url != '/' and item.url in page.url -%}
-        <li{% if isCurrent or isParent %} class="my-active-class"{% endif %}>
+        {%- set isParent = page.url == '/' and item.url in page.url -%}
+        <li{% if isParent or item.url == page.url %} class="my-active-class"{% endif %}>
           <a
             href="{{ item.url }}"
-            {% if isCurrent %}aria-current="page"{% endif %}>
+            {% if item.url == page.url %}aria-current="page"{% endif %}>
             {{ item.title }}
           </a>
         </li>
