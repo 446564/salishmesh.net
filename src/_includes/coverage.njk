@@ -4,48 +4,21 @@ layout: base.njk
 <main>
   <div id="map"></div>
   <script>
-      var map = new maplibregl.Map({
-          container: 'map',
-          style: {
-            "version": 8,
-            "sources": {
-              "osm": {
-                "type": "raster",
-                "tiles": ["https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"],
-                "tileSize": 256,
-                "attribution": "&copy; OpenStreetMap Contributors",
-                "maxzoom": 19
-              }
-            },
-            "layers": [
-              {
-                "id": "osm",
-                "type": "raster",
-                "source": "osm"
-              }
-            ]
-          },
-          center: [ -123.5117, 48.4768 ],
-          zoom: 8
-      });
+  var map = L.map('map').setView([48.4768, -123.5117], 10);
 
-      map.on('load', () => {
-        map.addSource('monkey-sparkles', {
-            'type': 'image',
-            'url': '/images/coverage/monkey-sparkles.png',
-            'coordinates': [[-124.8365, 49.43115], [-122.1204, 49.43115], [-122.12040, 47.6325], [-124.8365, 47.6325]]
-        });
-        map.addLayer(
-            {
-                'id': 'monkey-sparkles-coverage',
-                'type': 'raster',
-                'source': 'monkey-sparkles',
-                "paint": {
-                    "raster-opacity": 0.8
-                }
-            },
-        );
-    });
+  var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+  var imageUrl = '/images/coverage/monkey-sparkles.png';
+  var altText = 'Coverage from Monkey Sparkles';
+  var latLngBounds = L.latLngBounds([[49.43115, -124.8365], [47.6325, -122.1204]]);
+
+  var imageOverlay = L.imageOverlay(imageUrl, latLngBounds, {
+      opacity: 0.8,
+      alt: altText,
+      interactive: true
+  }).addTo(map);
   </script>
   <article>
     {{ content | safe }}
