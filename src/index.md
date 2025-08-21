@@ -9,7 +9,7 @@ eleventyNavigation:
 
 ## {{ meta.siteDescription }}
 
-> Salish Mesh operates on the radio preset USA/Canada (Narrow).
+> Salish Mesh operates on the radio preset USA/Canada (Recommended).
 >
 > Frequency: 910.525 MHz, Bandwidth: 62.5 kHz, Spreading Factor: 7; Default CR: 5
 
