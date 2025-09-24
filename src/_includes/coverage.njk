@@ -10,15 +10,21 @@ layout: base.njk
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
-  var imageUrl = '/images/coverage/monkey-sparkles.png';
-  var altText = 'Coverage from Monkey Sparkles';
-  var latLngBounds = L.latLngBounds([[49.43115, -124.8365], [47.6325, -122.1204]]);
 
-  var imageOverlay = L.imageOverlay(imageUrl, latLngBounds, {
-      opacity: 0.8,
-      alt: altText,
-      interactive: true
-  }).addTo(map);
+  {%- for repeater in repeaters %}
+    {%- if repeater.coverage -%}
+    var imageUrl = '/images/coverage/{{ repeater.coverage_overlay }}';
+    var altText = 'Coverage from {{ repeater.name }}';
+    var latLngBounds = L.latLngBounds([[{{ repeater.coverage_bounds[0][0] }}, {{ repeater.coverage_bounds[0][1] }}],[{{ repeater.coverage_bounds[1][0] }}, {{ repeater.coverage_bounds[1][1] }}]]);
+
+    var imageOverlay = L.imageOverlay(imageUrl, latLngBounds, {
+        opacity: 0.8,
+        alt: altText,
+        interactive: true
+    }).addTo(map);
+    {%- endif -%}
+  {%- endfor -%}
+
   </script>
   <article>
     {{ content | safe }}

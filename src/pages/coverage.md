@@ -11,17 +11,16 @@ eleventyNavigation:
 
 This interactive map show the theoretical coverage of current Salish Mesh repeaters. To see all publicly listed repeaters, room servers and clients please visit [the MeshCore Internet Map](https://meshcore.co.uk/map.html). We also have an active link to the [Puget Mesh](https://pugetmesh.org/meshcore/) MeshCore network.
 
-## "Official" repeaters
-
-What repeaters are officially maintained and operated by the Salish Mesh team?
-
-- Monkey Sparkles (Salish/MonkeySparkles) - located on Mt Work
-
-An official repeater is just one that we promise to maintain and operate, the goal of which is to allow connectivity from any point in the coverage area to another.
-
 ## Assumptions
 
 The coverage simulations make a few assumptions to help create a more realistic view of the mesh. In order to expect the shown signal quality, the devices joining the mesh are assumed to be at least 2 m above ground level at that point, and to have a quality antenna of at least 1.2 dBi gain.
+
+## Repeaters
+
+Information on repeaters that play an important role in the mesh, whose operators have chosen
+to share details about.
+
+  {% include "repeaters.njk" %}
 
 ## Help Improve Coverage
 

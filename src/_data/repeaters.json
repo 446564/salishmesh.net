@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Salish Monkey Sparkles",
+    "location": "Mt Work",
+    "operator": "Enot (ded) Skelly",
+    "operator_email": "info@salishmesh.net",
+    "hardware": {
+      "type": "Xiao NRF",
+      "antenna": "Gizont 8 dBi fiberglass",
+      "power": "solar w/ 3 Ah battery"
+    },
+    "coverage": true,
+    "coverage_overlay": "monkey-sparkles.png",
+    "coverage_bounds": [
+      [
+        49.43115,
+        -124.8365
+      ],
+      [
+        47.6325,
+        -122.1204
+      ]
+    ]
+  }
+]
