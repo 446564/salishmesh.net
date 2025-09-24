@@ -5,5 +5,5 @@ module.exports = {
   siteName: "Salish Mesh",
   siteDescription:
     "Salish Sea and surrounding area mesh radio network based on MeshCore. Community operated, free and open.",
-  authorName: "Enot Skelly", // optional
+  authorName: "Enot (ded) Skelly", // optional
 };
