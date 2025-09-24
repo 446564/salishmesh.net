@@ -13,3 +13,6 @@ Welcome to our collection of resources for building, operating and maintaining a
 
 - How to [Build a Simple Repeater](/how-to/simple-repeater)
 
+## Tools & Analysis
+
+- [Packet Analyzer](https://analyzer.letsme.sh/) - A web-based tool for analyzing mesh network packet data, useful for troubleshooting connectivity issues and understanding network traffic patterns
