@@ -16,4 +16,4 @@ Welcome to our collection of resources for building, operating and maintaining a
 ## Tools & Analysis
 
 - [Packet Analyzer](https://analyzer.letsme.sh/) - A web-based tool for analyzing mesh network packet data, useful for troubleshooting connectivity issues and understanding network traffic patterns
-- [MeshExpoer](https://map.w0z.is) - Real-time mapping of network nodes, message tracking, and statistical analysis for MeshCore and Meshtastic networks.
+- [MeshExplorer](https://map.w0z.is) - Real-time mapping of network nodes, message tracking, and statistical analysis for MeshCore and Meshtastic networks.
