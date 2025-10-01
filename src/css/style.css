@@ -10,31 +10,38 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding: 5vh clamp(1rem, 5vw, 3rem) 1rem;
+  padding: 1rem clamp(1rem, 5vw, 3rem) 1rem;
   font-family: system-ui, sans-serif;
   line-height: 1.5;
   color: #222;
 }
 
 body>* {
-  --layout-spacing: max(8vh, 3rem);
   --max-width: 90ch;
   width: min(100%, var(--max-width));
   margin-left: auto;
   margin-right: auto;
 }
 
-nav h1 {
-  font-size: 2.4rem;
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
+header img {
+  width: 8rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  margin-left: -1rem;
-  margin-right: -1rem;
+  margin: 0 auto 2rem;
+  justify-content: center;
 }
 
 nav ul li {
@@ -45,15 +52,18 @@ nav ul li.my-active-class {
   font-weight: bold;
 }
 
-header,
-main,
+/* Main content */
+main {
+  margin-bottom: 3rem;
+}
+
 main>*+* {
-  margin-top: var(--layout-spacing);
+  margin-top: 1em;
 }
 
 body>footer {
   margin-top: auto;
-  padding-top: var(--layout-spacing);
+  padding-top: 3rem;
 }
 
 body>footer div {
@@ -65,10 +75,6 @@ body>footer div {
 
 article *+* {
   margin-top: 1em;
-}
-
-article>h2:first-child {
-  text-align: center;
 }
 
 /* Typography */
@@ -86,7 +92,7 @@ article>h2:first-child {
 
 a {
   color: navy;
-  text-underline-offset: 0.08em;
+  text-decoration: none;
 }
 
 a:focus {

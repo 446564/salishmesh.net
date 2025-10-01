@@ -11,3 +11,8 @@ public
 
 # macOS related files
 .DS_Store
+
+# development tooling
+.claude/
+.playwright-mcp/
+.mcp.json

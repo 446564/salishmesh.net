@@ -10,6 +10,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/images/coverage");
   eleventyConfig.addWatchTarget("./src/images/coverage");
 
+  eleventyConfig.addPassthroughCopy("./src/images/salishmesh-logo.svg");
+
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
   eleventyConfig.addPlugin(eleventyNavigationPlugin, {
     navigationOptions: {
