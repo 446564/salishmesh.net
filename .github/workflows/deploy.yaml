@@ -1,0 +1,26 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: deploy
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Build Site
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+      - run: npm install
+      - run: npm run build --omit-dev
+
+      - name: Sync to server
+        run: |
+          rsync -chrlvzi --delete \
+            -e='/usr/bin/sshpass -p "${{secrets.REMOTE_PASSWORD}}" ssh -o StrictHostKeyChecking=no -l ${{secrets.REMOTE_USER}}' \
+            ./public/ ${{secrets.REMOTE_HOST}}:${{secrets.REMOTE_DIR}}
