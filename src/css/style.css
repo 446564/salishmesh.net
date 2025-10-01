@@ -17,24 +17,30 @@ body {
 }
 
 body>* {
-  --layout-spacing: max(8vh, 3rem);
   --max-width: 90ch;
   width: min(100%, var(--max-width));
   margin-left: auto;
   margin-right: auto;
 }
 
-nav h1 {
-  font-size: 2.4rem;
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
+header img {
+  width: 8rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 2rem;
   justify-content: center;
 }
 
@@ -46,18 +52,18 @@ nav ul li.my-active-class {
   font-weight: bold;
 }
 
-header {
-  margin-top: 0;
+/* Main content */
+main {
+  margin-bottom: 3rem;
 }
 
-main,
 main>*+* {
-  margin-top: var(--layout-spacing);
+  margin-top: 1em;
 }
 
 body>footer {
   margin-top: auto;
-  padding-top: var(--layout-spacing);
+  padding-top: 3rem;
 }
 
 body>footer div {
