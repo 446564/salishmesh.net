@@ -9,7 +9,7 @@ eleventyNavigation:
 
 Welcome to our collection of resources for building, operating and maintaining a mesh network like ours.
 
-## Hardware
+## Hardware Tutorials
 
 - How to [Build a Simple Repeater](/how-to/simple-repeater)
 
@@ -17,3 +17,12 @@ Welcome to our collection of resources for building, operating and maintaining a
 
 - [Packet Analyzer](https://analyzer.letsme.sh/) - A web-based tool for analyzing mesh network packet data, useful for troubleshooting connectivity issues and understanding network traffic patterns
 - [MeshExplorer](https://map.w0z.is) - Real-time mapping of network nodes, message tracking, and statistical analysis for MeshCore and Meshtastic networks.
+- [Radio Mobile](https://www.ve2dbe.com/english1.html) - Generate coverage maps and other resources.
+
+## Equipment (Repeaters)
+ - [WisMesh Solar Mini](https://www.aliexpress.com/item/32908615100.html) - Ships from China: ~$150 CAD
+ - [Rak Wireless 8dbi Antenna](https://mappingnetwork.ca/products/rakwireless-8dbi-fiberglass-antenna?srsltid=AfmBOopWTWkyL8aL4kKvxOAXJFYNEEIgaoj4ZICvCRaorahbFwbbHdHW) - Used by Yaletown Repeater - Ships from Canada: ~$80 CAD
+ - [RAIGEN 8dBi Antenna](https://www.amazon.ca/RAIGEN-Lightning-Arrestor-Omni-Directional-Sensecap/dp/B09SK7MCQL) - Used by VHS Repeater - Amazon: ~$130 CAD
+
+## Equipment (Companions)
+ - [WisMesh Pocket V2](https://www.aliexpress.com/item/1005008274198434.html) - Ships from China: ~$140 CAD
