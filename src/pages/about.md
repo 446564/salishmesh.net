@@ -29,4 +29,8 @@ There is an active [community discord](https://discord.gg/meshcore) with a few l
 - [Vancouver BC](https://discord.com/channels/1343693475589263471/1375027971446013982)
 - [Pacific Northwest](https://discord.com/channels/1343693475589263471/1343714078748708976)
 
+## Other Mesh Projects
+- [Puget Mesh](https://pugetmesh.org)
+- [Ottawa Mesh](https://ottawamesh.ca)
+
 > This site is operated by Enot (ded) Skelly.
