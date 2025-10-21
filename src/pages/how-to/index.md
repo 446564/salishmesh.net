@@ -23,6 +23,7 @@ Welcome to our collection of resources for building, operating and maintaining a
  - [WisMesh Solar Mini](https://www.aliexpress.com/item/32908615100.html) - Ships from China: ~$150 CAD
  - [Rak Wireless 8dbi Antenna](https://mappingnetwork.ca/products/rakwireless-8dbi-fiberglass-antenna?srsltid=AfmBOopWTWkyL8aL4kKvxOAXJFYNEEIgaoj4ZICvCRaorahbFwbbHdHW) - Used by Yaletown Repeater - Ships from Canada: ~$80 CAD
  - [RAIGEN 8dBi Antenna](https://www.amazon.ca/RAIGEN-Lightning-Arrestor-Omni-Directional-Sensecap/dp/B09SK7MCQL) - Used by VHS Repeater - Amazon: ~$130 CAD
+ - [ALFA 5dbi Omni](https://www.amazon.ca/dp/B08H8J6ZV6) - Used by Ottawa Mesh - Amazon: ~$30 CAD
 
 ## Equipment (Companions)
  - [WisMesh Pocket V2](https://www.aliexpress.com/item/1005008274198434.html) - Ships from China: ~$140 CAD
