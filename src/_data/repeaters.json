@@ -1,24 +1,97 @@
 [
   {
-    "name": "Salish Monkey Sparkles",
-    "location": "Mt Work",
+    "name": "Kirakira Monkī (Soon)",
+    "location": "on Mt Work",
     "operator": "Enot (ded) Skelly",
     "operator_email": "info@salishmesh.net",
     "hardware": {
-      "type": "Xiao NRF",
+      "type": "Ikoka Stick",
       "antenna": "Gizont 8 dBi fiberglass",
-      "power": "solar w/ 3 Ah battery"
+      "power": "solar w/ 10 Ah battery"
     },
     "coverage": true,
-    "coverage_overlay": "monkey-sparkles.png",
+    "active": false,
+    "coverage_overlay": "kirakira.png",
     "coverage_bounds": [
       [
-        49.43115,
-        -124.8365
+        50.32881,
+        -126.1949
       ],
       [
-        47.6325,
-        -122.1204
+        46.73152,
+        -120.7628
+      ]
+    ]
+  },
+  {
+    "name": "Olympic Village",
+    "location": "in Downtown Vancouver",
+    "operator": "Unknown",
+    "operator_email": "info@salishmesh.net",
+    "hardware": {
+      "type": "Unknown",
+      "antenna": "Unknown",
+      "power": "Unknown"
+    },
+    "coverage": true,
+    "active": true,
+    "coverage_overlay": "olympic.png",
+    "coverage_bounds": [
+      [
+        50.16977,
+        -124.4864
+      ],
+      [
+        48.37113,
+        -121.7298
+      ]
+    ]
+  },
+  {
+    "name": "SC02",
+    "location": "on a rock off the coast of Sechelt",
+    "operator": "Unknown",
+    "operator_email": "info@salishmesh.net",
+    "hardware": {
+      "type": "Rak Wismesh mini",
+      "antenna": "Rak 2 dBi",
+      "power": "solar w/ 3.2 Ah battery"
+    },
+    "coverage": true,
+    "active": true,
+    "coverage_overlay": "sc02.png",
+    "coverage_bounds": [
+      [
+        50.31724,
+        -125.0942
+      ],
+      [
+        48.5186,
+        -122.3293
+      ]
+    ]
+  },
+  {
+    "name": "SC03",
+    "location": "at Dakota Ridge, Sunshine Coast",
+    "operator": "Unknown",
+    "operator_email": "info@salishmesh.net",
+    "hardware": {
+      "type": "unknown",
+      "antenna": "unknown",
+      "power": "solar w/ battery"
+    },
+    "coverage": true,
+    "active": true,
+    "coverage_overlay": "sc03.png",
+    "coverage_bounds": [
+      [
+        50.4128,
+        -124.9799
+      ],
+      [
+        48.61415,
+        -122.2096
       ]
     ]
   }
