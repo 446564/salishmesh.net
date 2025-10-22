@@ -2,39 +2,9 @@
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
-const fs = require("fs");
-const path = require("path");
-const crypto = require("crypto");
 
 module.exports = function (eleventyConfig) {
-  // Cache busting: copy CSS with hash in filename
-  eleventyConfig.on('eleventy.before', async () => {
-    const cssPath = './src/css/style.css';
-    const content = fs.readFileSync(cssPath);
-    const hash = crypto.createHash("md5").update(content).digest("hex").substring(0, 10);
-    const outputDir = './public/css';
-
-    // Store hash for use in filter
-    global.cssHash = hash;
-
-    // Ensure output directory exists
-    if (!fs.existsSync(outputDir)) {
-      fs.mkdirSync(outputDir, { recursive: true });
-    }
-
-    // Copy CSS with hashed filename: style-hash.css
-    const hashedFilename = `style-${hash}.css`;
-    fs.copyFileSync(cssPath, path.join(outputDir, hashedFilename));
-  });
-
-  // Filter to get hashed CSS filename
-  eleventyConfig.addFilter("cacheBust", function(filepath) {
-    if (filepath === '/css/style.css' && global.cssHash) {
-      return `/css/style-${global.cssHash}.css`;
-    }
-    return filepath;
-  });
-
+  eleventyConfig.addPassthroughCopy("./src/css/");
   eleventyConfig.addWatchTarget("./src/css/");
 
   eleventyConfig.addPassthroughCopy("./src/images/coverage");
