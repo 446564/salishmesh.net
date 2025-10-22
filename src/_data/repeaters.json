@@ -26,12 +26,12 @@
   {
     "name": "Olympic Village",
     "location": "in Downtown Vancouver",
-    "operator": "Unknown",
+    "operator": "Jacob",
     "operator_email": "info@salishmesh.net",
     "hardware": {
-      "type": "Unknown",
-      "antenna": "Unknown",
-      "power": "Unknown"
+      "type": "SenseCap Solar",
+      "antenna": "Rak 8 dBi",
+      "power": "Solar w/ battery"
     },
     "coverage": true,
     "active": true,
