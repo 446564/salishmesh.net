@@ -97,7 +97,7 @@
   },
   {
     "name": "Parksville",
-    "location": "Parksville Bay BC",
+    "location": "in Parksville Bay BC",
     "operator": "Scott",
     "operator_email": "info@salishmesh.net",
     "hardware": {
@@ -121,7 +121,7 @@
   },
   {
     "name": "VE7UBC North A",
-    "location": "UBC - Gage Tower South",
+    "location": "at UBC on Gage Tower South",
     "operator": "ka.RFz (GA)",
     "operator_email": "info@salishmesh.net",
     "hardware": {
@@ -145,7 +145,7 @@
   },
   {
     "name": "VE7NWR New West Side Co",
-    "location": "New West - Viceroy",
+    "location": "in New West - Viceroy",
     "operator": "ka.RFz (GA)",
     "operator_email": "info@salishmesh.net",
     "hardware": {
