@@ -9,8 +9,8 @@
       "antenna": "Gizont 8 dBi fiberglass",
       "power": "solar w/ 10 Ah battery"
     },
-    "coverage": true,
-    "active": false,
+    "coverage": false,
+    "active": true,
     "coverage_overlay": "kirakira.png",
     "coverage_bounds": [
       [
@@ -77,7 +77,7 @@
     "operator": "Scott",
     "operator_email": "info@salishmesh.net",
     "hardware": {
-      "type": "Rak Wishemsh mini",
+      "type": "Rak Wismesh mini",
       "antenna": "Rak 2 dBi",
       "power": "solar w/ 3.2 Ah battery"
     },
@@ -101,7 +101,7 @@
     "operator": "Scott",
     "operator_email": "info@salishmesh.net",
     "hardware": {
-      "type": "Rak Wishemsh mini",
+      "type": "Rak Wismesh mini",
       "antenna": "Rak 2 dBi",
       "power": "solar w/ 3.2 Ah battery"
     },
