@@ -94,5 +94,53 @@
         -122.2096
       ]
     ]
+  },
+  {
+    "name": "VE7UBC North A",
+    "location": "UBC - Gage Tower South",
+    "operator": "ka.RFz (GA)",
+    "operator_email": "info@salishmesh.net",
+    "hardware": {
+      "type": "Station G2",
+      "antenna": "Rak 8 dBi",
+      "power": "USB/PoE+"
+    },
+    "coverage": true,
+    "active": true,
+    "coverage_overlay": "ve7ubc-na.png",
+    "coverage_bounds": [
+      [
+        51.06793,
+        -126.0062
+      ],
+      [
+        47.47064,
+        -120.4932
+      ]
+    ]
+  },
+  {
+    "name": "VE7NWR New West Side Co",
+    "location": "New West - Viceroy",
+    "operator": "ka.RFz (GA)",
+    "operator_email": "info@salishmesh.net",
+    "hardware": {
+      "type": "Station G2",
+      "antenna": "Rak 8 dBi",
+      "power": "USB/PoE+"
+    },
+    "coverage": true,
+    "active": true,
+    "coverage_overlay": "newwestsideco.png",
+    "coverage_bounds": [
+      [
+        51.01061,
+        -125.6733
+      ],
+      [
+        47.41332,
+        -120.1666
+      ]
+    ]
   }
 ]
