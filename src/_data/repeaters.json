@@ -225,17 +225,17 @@
       "antenna": "Alfa 5.8 dBi",
       "power": "solar w/ battery"
     },
-    "coverage": false,
+    "coverage": true,
     "active": true,
-    "coverage_overlay": "va7mcz-coquitlam.png",
+    "coverage_overlay": "brohm-ridge.png",
     "coverage_bounds": [
       [
-        51.01061,
-        -125.6733
+        51.61655,
+        -125.8827
       ],
       [
-        47.41332,
-        -120.1666
+        48.01926,
+        -120.3074
       ]
     ]
   }
