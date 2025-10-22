@@ -201,17 +201,17 @@
       "antenna": "Rak 2 dBi",
       "power": "solar w/ 3.2 Ah battery"
     },
-    "coverage": false,
+    "coverage": true,
     "active": true,
     "coverage_overlay": "va7mcz-coquitlam.png",
     "coverage_bounds": [
       [
-        51.01061,
-        -125.6733
+        51.02345,
+        -125.591
       ],
       [
-        47.41332,
-        -120.1666
+        47.42616,
+        -120.083
       ]
     ]
   },
