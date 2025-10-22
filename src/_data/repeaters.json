@@ -166,5 +166,77 @@
         -120.1666
       ]
     ]
+  },
+  {
+    "name": "RT📡-Seafair",
+    "location": "at Seafair Shopping Center, Richmond BC",
+    "operator": "Roger",
+    "operator_email": "info@salishmesh.net",
+    "hardware": {
+      "type": "Heltec V3",
+      "antenna": "Alfa 5.8 dBi",
+      "power": "USB/PoE+"
+    },
+    "coverage": true,
+    "active": true,
+    "coverage_overlay": "rt-seafair.png",
+    "coverage_bounds": [
+      [
+        50.94785,
+        -125.9328
+      ],
+      [
+        47.35056,
+        -120.4332
+      ]
+    ]
+  },
+  {
+    "name": "VA7MCZ - Coquitlam",
+    "location": "in Pacific Reach, Port Coquitlam",
+    "operator": "HJS",
+    "operator_email": "info@salishmesh.net",
+    "hardware": {
+      "type": "Rak Wismesh mini",
+      "antenna": "Rak 2 dBi",
+      "power": "solar w/ 3.2 Ah battery"
+    },
+    "coverage": false,
+    "active": true,
+    "coverage_overlay": "va7mcz-coquitlam.png",
+    "coverage_bounds": [
+      [
+        51.01061,
+        -125.6733
+      ],
+      [
+        47.41332,
+        -120.1666
+      ]
+    ]
+  },
+  {
+    "name": "AJS-BrohmRidge",
+    "location": "Brohm Ridge, Cheakamus",
+    "operator": "Chris",
+    "operator_email": "info@salishmesh.net",
+    "hardware": {
+      "type": "Rak 4631",
+      "antenna": "Alfa 5.8 dBi",
+      "power": "solar w/ battery"
+    },
+    "coverage": false,
+    "active": true,
+    "coverage_overlay": "va7mcz-coquitlam.png",
+    "coverage_bounds": [
+      [
+        51.01061,
+        -125.6733
+      ],
+      [
+        47.41332,
+        -120.1666
+      ]
+    ]
   }
 ]
