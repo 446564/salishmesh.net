@@ -96,6 +96,30 @@
     ]
   },
   {
+    "name": "Parksville",
+    "location": "Parksville Bay BC",
+    "operator": "Scott",
+    "operator_email": "info@salishmesh.net",
+    "hardware": {
+      "type": "Rak Wishemsh mini",
+      "antenna": "Rak 2 dBi",
+      "power": "solar w/ 3.2 Ah battery"
+    },
+    "coverage": true,
+    "active": true,
+    "coverage_overlay": "parksville.png",
+    "coverage_bounds": [
+      [
+        51.13165,
+        -127.0911
+      ],
+      [
+        47.53436,
+        -121.5709
+      ]
+    ]
+  },
+  {
     "name": "VE7UBC North A",
     "location": "UBC - Gage Tower South",
     "operator": "ka.RFz (GA)",
