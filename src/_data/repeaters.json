@@ -50,7 +50,7 @@
   {
     "name": "SC02",
     "location": "on a rock off the coast of Sechelt",
-    "operator": "Unknown",
+    "operator": "Scott",
     "operator_email": "info@salishmesh.net",
     "hardware": {
       "type": "Rak Wismesh mini",
@@ -74,12 +74,12 @@
   {
     "name": "SC03",
     "location": "at Dakota Ridge, Sunshine Coast",
-    "operator": "Unknown",
+    "operator": "Scott",
     "operator_email": "info@salishmesh.net",
     "hardware": {
-      "type": "unknown",
-      "antenna": "unknown",
-      "power": "solar w/ battery"
+      "type": "Rak Wishemsh mini",
+      "antenna": "Rak 2 dBi",
+      "power": "solar w/ 3.2 Ah battery"
     },
     "coverage": true,
     "active": true,
