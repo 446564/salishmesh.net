@@ -4,7 +4,7 @@ layout: base.njk
 <main>
   <div id="map"></div>
   <script>
-  var map = L.map('map').setView([48.4768, -123.5117], 10);
+  var map = L.map('map').setView([49, -123.5117], 8);
 
   var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -12,7 +12,7 @@ layout: base.njk
   }).addTo(map);
 
   {%- for repeater in repeaters %}
-    {%- if repeater.coverage -%}
+    {%- if repeater.coverage and repeater.active -%}
     var imageUrl = '/images/coverage/{{ repeater.coverage_overlay }}';
     var altText = 'Coverage from {{ repeater.name }}';
     var latLngBounds = L.latLngBounds([[{{ repeater.coverage_bounds[0][0] }}, {{ repeater.coverage_bounds[0][1] }}],[{{ repeater.coverage_bounds[1][0] }}, {{ repeater.coverage_bounds[1][1] }}]]);

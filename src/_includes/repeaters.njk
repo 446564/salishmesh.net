@@ -1,6 +1,8 @@
 
+<ul>
 {%- for repeater in repeaters -%}
-
-- {{ repeater.name }} - located at {{ repeater.location }}
-
+{%- if repeater.active -%}
+  <li>{{ repeater.name }} - located {{ repeater.location }}</li>
+{%- endif -%}
 {%- endfor -%}
+</ul>
