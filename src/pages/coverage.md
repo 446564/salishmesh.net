@@ -9,7 +9,7 @@ eleventyNavigation:
 
 ## Mesh Coverage Map
 
-This interactive map show the theoretical coverage of current Salish Mesh repeaters. To see all publicly listed repeaters, room servers and clients please visit [the MeshCore Internet Map](https://meshcore.co.uk/map.html). We also have an active link to the [Puget Mesh](https://pugetmesh.org/meshcore/) MeshCore network.
+This interactive map show the theoretical coverage of current Salish Mesh repeaters. To see all publicly listed repeaters, room servers and clients please visit [the MeshCore Internet Map](https://meshcore.co.uk/map.html). We also had an active link to the [Puget Mesh](https://pugetmesh.org/meshcore/) MeshCore network which will be restored along with major coverage for southern vancouver island by the end of the month.
 
 ## Assumptions
 
