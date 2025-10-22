@@ -18,7 +18,7 @@ layout: base.njk
     var latLngBounds = L.latLngBounds([[{{ repeater.coverage_bounds[0][0] }}, {{ repeater.coverage_bounds[0][1] }}],[{{ repeater.coverage_bounds[1][0] }}, {{ repeater.coverage_bounds[1][1] }}]]);
 
     var imageOverlay = L.imageOverlay(imageUrl, latLngBounds, {
-        opacity: 0.8,
+        opacity: 0.6,
         alt: altText,
         interactive: true
     }).addTo(map);
