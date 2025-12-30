@@ -168,13 +168,13 @@
     ]
   },
   {
-    "name": "RT📡-Seafair",
+    "name": "YVR//Seafair",
     "location": "at Seafair Shopping Center, Richmond BC",
-    "operator": "Roger",
-    "operator_email": "info@salishmesh.net",
+    "operator": "RT(Roger)",
+    "operator_email": "meshcore@mirante.ca",
     "hardware": {
-      "type": "Heltec V3",
-      "antenna": "Alfa 5.8 dBi",
+      "type": "Ikoka Stick",
+      "antenna": "Rak 8 dBi",
       "power": "USB/PoE+"
     },
     "coverage": true,
