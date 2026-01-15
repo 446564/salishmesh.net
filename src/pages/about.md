@@ -23,7 +23,9 @@ A replacement for the internet, cellphones or satellite emergency communications
 <a name="reach-out"></a>
 You can send electronic mail to info @ salish mesh DOT net.
 
-There is an active [community discord](https://discord.gg/meshcore) with a few local area sub groups:
+The biggest regional discord is the [Cascadia Mesh](https://discord.gg/uEsgRemzQu), this one is community operated and not directly associated with meshcore the project.
+
+There is also an active [poject discord](https://discord.gg/Rx9NgUbB57) with a few local area sub groups:
 
 - [Salish Mesh](https://discord.com/channels/1343693475589263471/1362936867770732634)
 - [Vancouver BC](https://discord.com/channels/1343693475589263471/1375027971446013982)
