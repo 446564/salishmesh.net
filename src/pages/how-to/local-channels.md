@@ -12,12 +12,12 @@ eleventyNavigation:
 
 Local channels are usually in the form of hashtag channels. These are an easy
 way to share a private channel with others. It is important to remember that
-anyone can join the channel if the use the same hashtag, i.e. `#test`.
+anyone can join the channel if they use the same hashtag, i.e. `#test`.
 
 That said it's easy to tell someone over the mesh, `hey join #southisland`, and
 they will be able to click the tag and join the channel.
 
-## Channels is use around the Salish Mesh area
+## Channels in use around the Salish Mesh area
 
 - `#salishmesh`: general discussion, operators
 - `#bc`: regional general discussion
@@ -35,7 +35,7 @@ channel.
 
 Otherwise you can join or even create your own:
 
- - Official App: click the three dot menu, top right, and click `add channel`
+- Official App: click the three dot menu, top right, and click `add channel`
  then `join a hashtag channel`.
- - Meshcore Open: Navigate to the channels page, click the plus button, then
+- Meshcore Open: Navigate to the channels page, click the plus button, then
  `join a hashtag channel`.
