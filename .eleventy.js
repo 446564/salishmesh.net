@@ -1,7 +1,6 @@
 
 const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css/");
@@ -34,25 +33,6 @@ module.exports = function (eleventyConfig) {
       pictureAttributes: {}
     },
   },
-  );
-  eleventyConfig.addPlugin(feedPlugin, {
-		type: "rss",
-		outputPath: "/feed.xml",
-		collection: {
-			name: "all",
-			limit: 0,     // 0 means no limit
-		},
-		metadata: {
-			language: "en",
-			title: "Salish Mesh",
-			subtitle: "Salish Sea and surrounding area mesh radio network based on MeshCore. Community operated, free and open.",
-			base: "https://salishmesh.net/",
-			author: {
-				name: "Enot Skelly",
-				email: "info@salishmesh.net",
-			}
-		}
-	}
   );
 
   return {
