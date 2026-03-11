@@ -62,9 +62,8 @@ not make sense with the others already covering most of it.
 ### How to add a scope to a channel
 
 You can use anything you like for a scope, so you can have local area scopes
-between friends or neighboring repeaters etc. The scope may start with a `#`, it
-is case-insensitive and must only contain: letters, numbers and the symbols `-`
-`$` and `#`.
+between friends or neighboring repeaters etc. The scope may start with a `#`,
+and must be lower case and may contain numbers and `-`.
 
 - Liam's App: click the three dot menu, top right, and click `Set Region Scope`
  then add a scope if the one you want is not listed, otherwise click the scope
