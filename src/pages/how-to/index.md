@@ -11,7 +11,7 @@ Welcome to our collection of resources for building, operating and maintaining a
 
 ## Use the mesh
 
-- What local [channels](/how-to/local-channels) are popular in Salish Mesh?
+- What local [channels](/how-to/local-channels) are popular in Salish Mesh? Also includes information on region scopes.
 
 ## Hardware Tutorials
 
@@ -35,7 +35,7 @@ Welcome to our collection of resources for building, operating and maintaining a
   - [P1 Pro (with GPS & Batteries)](https://ca.robotshop.com/products/sensecap-solar-node-p1-pro-for-meshtastic-w-gps-battery) - Ships from Quebec: ~$130 CAD
 - [WisMesh Solar Mini](https://www.aliexpress.com/item/32908615100.html) - Ships from China: ~$150 CAD
 - [PiMesh-1W](https://meshsmith.net/products/pimesh-1w) - Ships from the US: ~100CAD
-- [MeshAdv-Pi-Hat](https://github.com/chrismyers2000/MeshAdv-Pi-Hat) - 
+- [MeshAdv-Pi-Hat](https://github.com/chrismyers2000/MeshAdv-Pi-Hat) -
 
 #### Companions
 
@@ -68,3 +68,4 @@ Welcome to our collection of resources for building, operating and maintaining a
 #### Heltec v3 & v4 specific
 
 - [Meshcomod]([https://meshcomod](https://meshcomod.com/)) - Enables BLE, TCP and USB interfaces at the same time on Heltec devices
+
