@@ -98,6 +98,7 @@ main { flex: 1; }
 }
 .nav-logo:hover { text-decoration: none; }
 .nav-logo img { height: 32px; width: auto; }
+[data-theme="dark"] .nav-logo img { filter: brightness(0) invert(1); }
 
 .nav-links {
   display: flex; align-items: center; gap: 0.25rem; margin-left: 0.5rem;

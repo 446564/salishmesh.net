@@ -1,0 +1,58 @@
+---
+layout: base.njk
+---
+<main>
+  <div class="page-wrap">
+    <a href="/how-to/" class="back-link">&larr; How-To Library</a>
+    <div class="page-header">
+      <h1>Local Channels &amp; Regions</h1>
+      <p class="page-subtitle">Hashtag channels and regional scopes used on Salish Mesh.</p>
+    </div>
+
+    <div class="card" style="margin-bottom:1.5rem">
+      <h2 class="card-section-title">What are local channels?</h2>
+      <p>Local channels use hashtag format — an easy way to share a private channel with others. Anyone can join a channel if they know the hashtag, e.g. <code>#test</code>.</p>
+      <p style="margin-top:1rem">You can tell someone over the mesh <em>"hey join #southisland"</em> and they can click the tag to join.</p>
+
+      <h3 style="margin:1.5rem 0 0.75rem;font-size:0.95rem;font-weight:600">Channels in use around Salish Mesh</h3>
+      <div class="channel-list">
+        <div class="channel-row"><code class="channel-tag">#salishmesh</code><span class="channel-desc">General discussion, operators</span></div>
+        <div class="channel-row"><code class="channel-tag">#bc</code><span class="channel-desc">Regional general discussion</span></div>
+        <div class="channel-row"><code class="channel-tag">#southisland</code><span class="channel-desc">Greater Victoria area users and operators</span></div>
+        <div class="channel-row"><code class="channel-tag">#vancouver</code></div>
+        <div class="channel-row"><code class="channel-tag">#ubc</code></div>
+        <div class="channel-row"><code class="channel-tag">#bot-van</code><span class="channel-desc">Bots operated by Vancouver users</span></div>
+        <div class="channel-row"><code class="channel-tag">#testing</code><span class="channel-desc">Test your new setup or play with bots</span></div>
+        <div class="channel-row"><code class="channel-tag">#emergency</code><span class="channel-desc">Reserved for emergency notification — shared across PNW</span></div>
+      </div>
+
+      <h3 style="margin:1.5rem 0 0.75rem;font-size:0.95rem;font-weight:600">How to add them</h3>
+      <p style="margin-bottom:0.75rem">If you see a hashtag in chat in the official app, tap it to join. Otherwise:</p>
+      <div class="step-list">
+        <div class="step"><span class="step-label">Liam's App</span>Tap the three-dot menu → <code>Add channel</code> → <code>Join a hashtag channel</code>.</div>
+        <div class="step"><span class="step-label">MeshCore Open</span>Navigate to Channels → tap <code>+</code> → <code>Join a hashtag channel</code>.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-section-title">What are regions?</h2>
+      <p>Regions are named scopes for traffic. A user can scope a channel to a region — only repeaters that explicitly allow that region's flood traffic will forward it. This limits how far traffic spreads.</p>
+
+      <h3 style="margin:1.5rem 0 0.75rem;font-size:0.95rem;font-weight:600">Regions in use around Salish Mesh</h3>
+      <p style="margin-bottom:1rem;color:var(--text-muted);font-size:0.9rem">Most repeaters still allow un-scoped flood traffic, so scoping is optional for now. Active regions include:</p>
+      <div class="channel-list">
+        <div class="channel-row"><code class="channel-tag">#bc</code></div>
+        <div class="channel-row"><code class="channel-tag">#swbc</code></div>
+        <div class="channel-row"><code class="channel-tag">#southisland</code></div>
+        <div class="channel-row"><code class="channel-tag">#salishmesh</code></div>
+      </div>
+
+      <h3 style="margin:1.5rem 0 0.75rem;font-size:0.95rem;font-weight:600">How to set a region scope</h3>
+      <p style="margin-bottom:0.75rem;font-size:0.9rem;color:var(--text-muted)">Scope names must be lowercase, may start with <code>#</code>, and may contain numbers and <code>-</code>.</p>
+      <div class="step-list">
+        <div class="step"><span class="step-label">Liam's App</span>Three-dot menu → <code>Set Region Scope</code> → pick or add a scope. To remove, click the header showing the current scope and set to <code>none</code>.</div>
+        <div class="step"><span class="step-label">MeshCore Open</span>Coming soon.</div>
+      </div>
+    </div>
+  </div>
+</main>

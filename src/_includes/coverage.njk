@@ -5,7 +5,7 @@ layout: base.njk
   <div class="page-wrap">
     <div class="page-header">
       <h1>Coverage</h1>
-      <p class="page-subtitle">Prominent repeaters and live coverage across the Salish Sea region.</p>
+      <p class="page-subtitle">Notable repeaters in the Salish Mesh network. For real-world coverage data, see the live map below — coverage may extend beyond what's listed here.</p>
     </div>
 
     {# ── Map card ── #}
@@ -47,12 +47,18 @@ layout: base.njk
     </div>
 
     {# ── CTA ── #}
-    <div class="card" style="text-align:center;padding:2.5rem 2rem;margin-top:1rem">
-      <h3 style="margin-bottom:0.75rem">Help Improve Coverage</h3>
-      <p style="color:var(--text-muted);max-width:50ch;margin:0 auto 1.5rem">
-        Set up a repeater on your roof or in a tree, or report areas of spotty coverage you'd like to see expanded.
-      </p>
-      <a href="#" class="btn btn-primary protected-email" data-e="vasb@fnyvfuzrfu.arg">Get in touch &rarr;</a>
+    <h2 class="section-title">Help Improve Coverage</h2>
+    <div class="grid-2" style="margin-bottom:2rem">
+      <div class="card" style="text-align:center;padding:2rem">
+        <h3 style="margin-bottom:0.75rem">Add a Repeater</h3>
+        <p style="color:var(--text-muted);margin-bottom:1.5rem">Set up a repeater on your roof or in a tree, or report areas of spotty coverage you'd like to see expanded.</p>
+        <a href="#" class="btn btn-primary protected-email" data-e="vasb@fnyvfuzrfu.arg">Get in touch &rarr;</a>
+      </div>
+      <div class="card" style="text-align:center;padding:2rem">
+        <h3 style="margin-bottom:0.75rem">Map Coverage</h3>
+        <p style="color:var(--text-muted);margin-bottom:1.5rem">Download MeshMapper and help map real-world coverage in your area by wardriving the mesh.</p>
+        <a href="https://github.com/MeshMapper/MeshMapper_Flutter_App" class="btn btn-primary" target="_blank" rel="noopener">Get MeshMapper &rarr;</a>
+      </div>
     </div>
   </div>
 </main>
