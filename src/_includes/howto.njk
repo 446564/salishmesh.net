@@ -1,0 +1,273 @@
+---
+layout: base.njk
+---
+
+{# SVG helpers #}
+{% macro iconBook() %}
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 19.5A2.5 2.5 0 0 0 6.5 22H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15z"/></svg>
+{% endmacro %}
+{% macro iconHardware() %}
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+{% endmacro %}
+{% macro iconTool() %}
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+{% endmacro %}
+{% macro iconAntenna() %}
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5c0-1.1.2-2.1.6-3M5.5 5.5A7 7 0 0 1 19 8.5M8.5 8.5a3.5 3.5 0 0 1 7 0M12 8.5V22"/></svg>
+{% endmacro %}
+{% macro iconRadio() %}
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.9 4.9a10 10 0 0 1 14.14 0M7.76 7.76a6 6 0 0 1 8.49 0M10.6 10.6a2 2 0 0 1 2.83 0M12 13v.01"/></svg>
+{% endmacro %}
+{% macro iconExt() %}
+<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+{% endmacro %}
+
+<main>
+  <div class="page-wrap">
+    <div class="page-header">
+      <h1>How-To Library</h1>
+      <p class="page-subtitle">Resources for building, operating and maintaining a mesh network.</p>
+    </div>
+
+    {# ── Use the mesh ── #}
+    <section class="howto-section">
+      <h2 class="section-title">Use the Mesh</h2>
+      <div class="grid-2">
+        <a href="/how-to/local-channels/" class="howto-card-link">
+          <div class="card howto-card">
+            {{ iconBook() }}
+            <div>
+              <h4>Local Channels</h4>
+              <p>Popular channels in Salish Mesh and region scope information.</p>
+              <span class="howto-link">Read guide &rarr;</span>
+            </div>
+          </div>
+        </a>
+        <div class="card howto-card">
+          {{ iconBook() }}
+          <div>
+            <h4>MeshCore Regions</h4>
+            <p>Region definitions and channel plans for MeshCore networks.</p>
+            <a href="https://gessaman.com/meshcore/regions/" class="ext-link" target="_blank" rel="noopener">
+              gessaman.com/meshcore/regions {{ iconExt() }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {# ── Hardware Tutorials ── #}
+    <section class="howto-section">
+      <h2 class="section-title">Hardware Tutorials</h2>
+      <div class="grid-2">
+        <a href="/how-to/simple-repeater/" class="howto-card-link">
+          <div class="card howto-card">
+            {{ iconHardware() }}
+            <div>
+              <h4>Build a Simple Repeater</h4>
+              <p>Step-by-step guide to setting up your own solar-powered mesh repeater node.</p>
+              <span class="howto-link">Read guide &rarr;</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    {# ── Tools & Analysis ── #}
+    <section class="howto-section">
+      <h2 class="section-title">Tools &amp; Analysis</h2>
+      <div class="grid-2">
+        <div class="card howto-card">
+          {{ iconTool() }}
+          <div>
+            <h4>Packet Analyzer</h4>
+            <p>Web tool for analyzing mesh network packet data and troubleshooting.</p>
+            <a href="https://analyzer.letsme.sh/" class="ext-link" target="_blank" rel="noopener">analyzer.letsme.sh {{ iconExt() }}</a>
+          </div>
+        </div>
+        <div class="card howto-card">
+          {{ iconTool() }}
+          <div>
+            <h4>MeshExplorer</h4>
+            <p>Real-time mapping of nodes, message tracking and statistical analysis.</p>
+            <a href="https://map.w0z.is" class="ext-link" target="_blank" rel="noopener">map.w0z.is {{ iconExt() }}</a>
+          </div>
+        </div>
+        <div class="card howto-card">
+          {{ iconTool() }}
+          <div>
+            <h4>Radio Mobile</h4>
+            <p>Generate coverage maps and other propagation resources.</p>
+            <a href="https://www.ve2dbe.com/english1.html" class="ext-link" target="_blank" rel="noopener">ve2dbe.com {{ iconExt() }}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {# ── Equipment ── #}
+    <section class="howto-section">
+      <h2 class="section-title">Equipment</h2>
+      <p class="section-note">Salish Mesh does not endorse one piece of hardware over others. Links are informational.</p>
+
+      <div class="card" style="margin-bottom:1rem">
+        <details class="equip-details">
+          <summary>
+            <span class="equip-icon">{{ iconAntenna() }}</span>
+            <span>Repeater Nodes</span>
+            <span class="equip-chevron equip-chevron-closed">&#9656;</span>
+            <span class="equip-chevron equip-chevron-open">&#9662;</span>
+          </summary>
+          <div class="equip-body">
+            <a href="https://ca.robotshop.com/products/sensecap-solar-node-p1-meshtastic-w-o-gps-battery" class="equip-item" target="_blank" rel="noopener">
+              <span class="equip-item-name">SenseCAP Solar Node P1</span>
+              <span class="equip-item-note">~$100 CAD &middot; Ships from Quebec</span>
+            </a>
+            <a href="https://ca.robotshop.com/products/sensecap-solar-node-p1-pro-for-meshtastic-w-gps-battery" class="equip-item" target="_blank" rel="noopener">
+              <span class="equip-item-name">SenseCAP P1 Pro (GPS + battery)</span>
+              <span class="equip-item-note">~$130 CAD &middot; Ships from Quebec</span>
+            </a>
+            <a href="https://www.aliexpress.com/item/32908615100.html" class="equip-item" target="_blank" rel="noopener">
+              <span class="equip-item-name">WisMesh Solar Mini</span>
+              <span class="equip-item-note">~$150 CAD &middot; Ships from China</span>
+            </a>
+            <a href="https://meshsmith.net/products/pimesh-1w" class="equip-item" target="_blank" rel="noopener">
+              <span class="equip-item-name">PiMesh-1W</span>
+              <span class="equip-item-note">~$100 CAD &middot; Ships from US</span>
+            </a>
+          </div>
+        </details>
+      </div>
+
+      <div class="card" style="margin-bottom:1rem">
+        <details class="equip-details">
+          <summary>
+            <span class="equip-icon">{{ iconRadio() }}</span>
+            <span>Companion Devices</span>
+            <span class="equip-chevron equip-chevron-closed">&#9656;</span>
+            <span class="equip-chevron equip-chevron-open">&#9662;</span>
+          </summary>
+          <div class="equip-body">
+            <a href="https://www.aliexpress.com/item/1005009892797811.html" class="equip-item" target="_blank" rel="noopener">
+              <span class="equip-item-name">Meshtastic Wio Tracker L1</span>
+              <span class="equip-item-note">~$70 CAD &middot; Ships from China</span>
+            </a>
+            <a href="https://www.aliexpress.com/item/1005008274198434.html" class="equip-item" target="_blank" rel="noopener">
+              <span class="equip-item-name">WisMesh Pocket V2</span>
+              <span class="equip-item-note">~$140 CAD &middot; Ships from China</span>
+            </a>
+            <a href="https://www.aliexpress.com/item/1005010018446938.html" class="equip-item" target="_blank" rel="noopener">
+              <span class="equip-item-name">Heltec v4</span>
+              <span class="equip-item-note">~$30–50 CAD &middot; Ships from China</span>
+            </a>
+          </div>
+        </details>
+      </div>
+
+      <div class="card">
+        <details class="equip-details">
+          <summary>
+            <span class="equip-icon">{{ iconAntenna() }}</span>
+            <span>Antennas</span>
+            <span class="equip-chevron equip-chevron-closed">&#9656;</span>
+            <span class="equip-chevron equip-chevron-open">&#9662;</span>
+          </summary>
+          <div class="equip-body">
+            <a href="https://mappingnetwork.ca/products/rakwireless-8dbi-fiberglass-antenna" class="equip-item" target="_blank" rel="noopener">
+              <span class="equip-item-name">Rak Wireless 8 dBi Fiberglass</span>
+              <span class="equip-item-note">~$80 CAD &middot; Ships from Canada</span>
+            </a>
+            <a href="https://www.amazon.ca/RAIGEN-Lightning-Arrestor-Omni-Directional-Sensecap/dp/B09SK7MCQL" class="equip-item" target="_blank" rel="noopener">
+              <span class="equip-item-name">RAIGEN 8 dBi Omni</span>
+              <span class="equip-item-note">~$130 CAD &middot; Amazon</span>
+            </a>
+            <a href="https://www.amazon.ca/dp/B08H8J6ZV6" class="equip-item" target="_blank" rel="noopener">
+              <span class="equip-item-name">ALFA 5 dBi Omni</span>
+              <span class="equip-item-note">~$30 CAD &middot; Amazon</span>
+            </a>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    {# ── Firmware ── #}
+    <section class="howto-section">
+      <h2 class="section-title">Firmware</h2>
+      <p class="section-note">Salish Mesh does not endorse one firmware over another. Flash at your own risk.</p>
+      <div class="grid-2">
+        <div class="card howto-card">
+          {{ iconTool() }}
+          <div>
+            <h4>MeshCore (Official)</h4>
+            <p>The upstream original MeshCore firmware flasher.</p>
+            <a href="https://flasher.meshcore.co.uk/" class="ext-link" target="_blank" rel="noopener">flasher.meshcore.co.uk {{ iconExt() }}</a>
+          </div>
+        </div>
+        <div class="card howto-card">
+          {{ iconTool() }}
+          <div>
+            <h4>EasySkyMesh</h4>
+            <p>Custom firmware variant.</p>
+            <a href="https://github.com/IoTThinks/EasySkyMesh" class="ext-link" target="_blank" rel="noopener">github.com/IoTThinks/EasySkyMesh {{ iconExt() }}</a>
+          </div>
+        </div>
+        <div class="card howto-card">
+          {{ iconTool() }}
+          <div>
+            <h4>ZephCore</h4>
+            <p>MeshCore Zephyr RTOS port for additional hardware targets.</p>
+            <a href="https://github.com/liquidraver/ZephCore" class="ext-link" target="_blank" rel="noopener">github.com/liquidraver/ZephCore {{ iconExt() }}</a>
+          </div>
+        </div>
+        <div class="card howto-card">
+          {{ iconTool() }}
+          <div>
+            <h4>Meshcomod</h4>
+            <p>Enables BLE, TCP and USB interfaces simultaneously on Heltec devices.</p>
+            <a href="https://meshcomod.com/" class="ext-link" target="_blank" rel="noopener">meshcomod.com {{ iconExt() }}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {# ── Client Apps ── #}
+    <section class="howto-section">
+      <h2 class="section-title">Client Apps</h2>
+      <p class="section-note">Salish Mesh does not endorse one client application over others. Links are informational.</p>
+      <div class="grid-2">
+        <div class="card howto-card">
+          {{ iconRadio() }}
+          <div>
+            <h4>Original MeshCore</h4>
+            <p>Official MeshCore client by Liam Cottle.</p>
+            <a href="https://meshcore.io/#download" class="ext-link" target="_blank" rel="noopener">meshcore.io {{ iconExt() }}</a>
+          </div>
+        </div>
+        <div class="card howto-card">
+          {{ iconRadio() }}
+          <div>
+            <h4>MeshCore Open</h4>
+            <p>Open-source Flutter client for MeshCore LoRa mesh networking devices.</p>
+            <a href="https://github.com/zjs81/meshcore-open" class="ext-link" target="_blank" rel="noopener">github.com/zjs81/meshcore-open {{ iconExt() }}</a>
+          </div>
+        </div>
+        <div class="card howto-card">
+          {{ iconRadio() }}
+          <div>
+            <h4>MeshCore SAR</h4>
+            <p>Search and rescue focused MeshCore client.</p>
+            <a href="https://github.com/dz0ny/meshcore-sar" class="ext-link" target="_blank" rel="noopener">github.com/dz0ny/meshcore-sar {{ iconExt() }}</a>
+          </div>
+        </div>
+        <div class="card howto-card">
+          {{ iconRadio() }}
+          <div>
+            <h4>MeshCoreOne</h4>
+            <p>Alternative MeshCore client.</p>
+            <a href="https://github.com/Avi0n/MeshCoreOne" class="ext-link" target="_blank" rel="noopener">github.com/Avi0n/MeshCoreOne {{ iconExt() }}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>

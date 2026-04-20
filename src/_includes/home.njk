@@ -1,0 +1,112 @@
+---
+layout: base.njk
+---
+
+{# ── Hero ── #}
+<section class="hero">
+  <div class="hero-img-wrap">
+    <img src="{{ '/images/mtwork1.jpg' | url }}" alt="View from Mt Work, Vancouver Island" class="hero-img">
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <img src="{{ '/images/salishmesh-logo.svg' | url }}" alt="Salish Mesh" class="hero-logo" eleventy:ignore>
+    <h1 class="hero-title">Salish Mesh</h1>
+    <p class="hero-desc">Salish Sea and surrounding area mesh radio network based on MeshCore.<br>Community operated, free and open.</p>
+    <div class="hero-freq">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4.9 4.9a10 10 0 0 1 14.14 0M7.76 7.76a6 6 0 0 1 8.49 0M10.6 10.6a2 2 0 0 1 2.83 0M12 13v.01"/>
+      </svg>
+      <span>USA/Canada Recommended Preset</span>
+      <span class="hero-freq-sep">&middot;</span>
+      <code>910.525 MHz</code>
+      <code>BW 62.5 kHz</code>
+      <code>SF7 &middot; CR5</code>
+    </div>
+  </div>
+</section>
+
+{# ── Feature cards ── #}
+<section class="home-section">
+  <div class="container">
+    <div class="grid-3">
+      <div class="card card-accent-top">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 8.5c0-1.1.2-2.1.6-3M5.5 5.5A7 7 0 0 1 19 8.5M8.5 8.5a3.5 3.5 0 0 1 7 0M12 8.5V22"/>
+          </svg>
+        </div>
+        <h3>Community Operated</h3>
+        <p>Entirely volunteer-run repeater network, fully solar powered. No fees, no subscriptions.</p>
+      </div>
+      <div class="card card-accent-top">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4.9 4.9a10 10 0 0 1 14.14 0M7.76 7.76a6 6 0 0 1 8.49 0M10.6 10.6a2 2 0 0 1 2.83 0M12 13v.01"/>
+          </svg>
+        </div>
+        <h3>MeshCore Network</h3>
+        <p>Running on <a href="https://meshcore.io/" class="ext-link" target="_blank" rel="noopener">MeshCore</a> firmware with a link to <a href="https://pugetmesh.org/" class="ext-link" target="_blank" rel="noopener">Puget Mesh</a> — one big family.</p>
+      </div>
+      <div class="card card-accent-top">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" fill-rule="evenodd">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5z" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>10 Repeaters</h3>
+        <p>Active nodes spanning Metro Vancouver, Sunshine Coast, Vancouver Island and beyond.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ── Radio preset card ── #}
+<section class="home-section">
+  <div class="container">
+    <div class="card">
+      <div class="freq-card-label">Radio Preset</div>
+      <h2 class="freq-card-title">Getting on the mesh</h2>
+      <p class="freq-card-body">Select the <strong>USA/Canada (Recommended)</strong> preset in your MeshCore client, or configure manually:</p>
+      <div class="freq-params">
+        <div class="freq-param"><span class="freq-param-label">Frequency</span><code>910.525 MHz</code></div>
+        <div class="freq-param"><span class="freq-param-label">Bandwidth</span><code>62.5 kHz</code></div>
+        <div class="freq-param"><span class="freq-param-label">Spreading Factor</span><code>SF 7</code></div>
+        <div class="freq-param"><span class="freq-param-label">Coding Rate</span><code>CR 5</code></div>
+      </div>
+      <a href="https://meshcore.io/#download" class="btn btn-primary" target="_blank" rel="noopener">Get MeshCore &rarr;</a>
+    </div>
+  </div>
+</section>
+
+{# ── Neighbouring networks ── #}
+<section class="home-section">
+  <div class="container">
+    <h2 class="section-title">Neighbouring Networks</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h4 style="margin-bottom:0.4rem">Puget Mesh</h4>
+        <p style="font-size:0.9rem;margin-bottom:0.75rem">Linked neighbour — we share nodes across the border.</p>
+        <a href="https://pugetmesh.org" class="ext-link" target="_blank" rel="noopener">
+          pugetmesh.org
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+        </a>
+      </div>
+      <div class="card">
+        <h4 style="margin-bottom:0.4rem">Ottawa Mesh</h4>
+        <p style="font-size:0.9rem;margin-bottom:0.75rem">Community mesh in the Ottawa region.</p>
+        <a href="https://ottawamesh.ca" class="ext-link" target="_blank" rel="noopener">
+          ottawamesh.ca
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+        </a>
+      </div>
+      <div class="card">
+        <h4 style="margin-bottom:0.4rem">West Coast Mesh</h4>
+        <p style="font-size:0.9rem;margin-bottom:0.75rem">Coastal mesh network covering the Pacific Northwest.</p>
+        <a href="https://www.wcmesh.com" class="ext-link" target="_blank" rel="noopener">
+          wcmesh.com
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

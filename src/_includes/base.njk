@@ -1,31 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ meta.siteName }}{% if page.url != '/' %} | {{ title }} {% endif %}</title>
+  <title>{{ meta.siteName }}{% if page.url != '/' %} | {{ title }}{% endif %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
-  {% if page.url == '/coverage/' %}
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  {% endif %}
 </head>
 <body>
 
-  <header>
-    <img src="{{ '/images/salishmesh-logo.svg' | url }}" alt="Salish Mesh Logo" eleventy:ignore>
-    <h1> {{ meta.siteName }}{% if page.url != '/' %}  ~  {{ title }}{% endif %} </h1>
-  </header>
+  {# ── Nav ── #}
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="{{ '/' | url }}" class="nav-logo">
+        <img src="{{ '/images/salishmesh-logo.svg' | url }}" alt="Salish Mesh" eleventy:ignore>
+        <span>Salish Mesh</span>
+      </a>
 
-  {% include "nav.njk" %}
+      <div class="nav-links">
+        {% set topNav = collections.all | eleventyNavigation %}
+        {%- for item in topNav -%}
+          {%- if item.url -%}
+            <a href="{{ item.url }}" class="nav-link{% if item.url == page.url %} active{% endif %}"
+               {% if item.url == page.url %}aria-current="page"{% endif %}>
+              {{ item.title }}
+            </a>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      <div class="nav-spacer"></div>
+
+      {# Dark mode toggle #}
+      <button class="nav-icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/>
+        </svg>
+        <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <path d="M12 3v1m0 16v1M4.22 4.22l.7.7m12.16 12.16.7.7M3 12h1m16 0h1M4.22 19.78l.7-.7M18.36 5.64l.7-.7M12 7a5 5 0 1 0 0 10A5 5 0 0 0 12 7z"/>
+        </svg>
+      </button>
+
+      {# Hamburger #}
+      <button class="nav-icon-btn nav-hamburger" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+        <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    {# Mobile menu #}
+    <div class="nav-mobile-menu" id="mobile-menu">
+      {% set topNav = collections.all | eleventyNavigation %}
+      {%- for item in topNav -%}
+        {%- if item.url -%}
+          <a href="{{ item.url }}" class="nav-mobile-link{% if item.url == page.url %} active{% endif %}"
+             {% if item.url == page.url %}aria-current="page"{% endif %}>
+            {{ item.title }}
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </nav>
 
   {{ content | safe }}
 
-  <footer>
-    <div>
-      <p>&copy; {% year %} {{ meta.siteName }}</p>
-    </div>
+  <footer class="site-footer">
+    &copy; {% year %} {{ meta.siteName }} &middot;
+    <a href="#" class="protected-email" data-e="vasb@fnyvfuzrfu.arg">Email</a> &middot;
+    Operated by Enot (ded) Skelly
   </footer>
+
+  <script>
+    // ── Dark mode ──
+    (function() {
+      var saved = localStorage.getItem('sm-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', saved);
+      updateIcons(saved);
+    })();
+
+    function updateIcons(theme) {
+      var moon = document.getElementById('icon-moon');
+      var sun  = document.getElementById('icon-sun');
+      if (!moon || !sun) return;
+      if (theme === 'dark') { moon.style.display = 'none'; sun.style.display = ''; }
+      else                  { moon.style.display = '';     sun.style.display = 'none'; }
+    }
+
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+      var current = document.documentElement.getAttribute('data-theme') || 'light';
+      var next = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('sm-theme', next);
+      updateIcons(next);
+    });
+
+    // ── Hamburger ──
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      var menu   = document.getElementById('mobile-menu');
+      var iconM  = document.getElementById('icon-menu');
+      var iconC  = document.getElementById('icon-close');
+      var open   = menu.classList.toggle('open');
+      this.setAttribute('aria-expanded', open);
+      iconM.style.display = open ? 'none' : '';
+      iconC.style.display = open ? '' : 'none';
+    });
+
+    // ── ROT13 email protection ──
+    function rot13(s) {
+      return s.replace(/[a-zA-Z]/g, function(c) {
+        return String.fromCharCode(c.charCodeAt(0) + (c.toLowerCase() < 'n' ? 13 : -13));
+      });
+    }
+    document.querySelectorAll('.protected-email').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        e.preventDefault();
+        var encoded = this.getAttribute('data-e');
+        if (encoded) window.location.href = 'mailto:' + rot13(encoded);
+      });
+    });
+  </script>
+
 </body>
 </html>

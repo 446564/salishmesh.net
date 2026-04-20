@@ -1,5 +1,5 @@
 ---
-title: Local channels and regions used on Salish Mesh
+title: Local Channels & Regions
 layout: how-to.njk
 date: Last Modified
 permalink: /how-to/local-channels/
@@ -10,63 +10,39 @@ eleventyNavigation:
 
 ## What are local channels?
 
-Local channels are usually in the form of hashtag channels. These are an easy
-way to share a private channel with others. It is important to remember that
-anyone can join the channel if they use the same hashtag, i.e. `#test`.
+Local channels use hashtag format — an easy way to share a private channel with others. Anyone can join a channel if they know the hashtag, e.g. `#test`.
 
-That said it's easy to tell someone over the mesh, `hey join #southisland`, and
-they will be able to click the tag and join the channel.
+You can tell someone over the mesh *"hey join #southisland"* and they can click the tag to join.
 
-### Channels in use around the Salish Mesh area
+### Channels in use around Salish Mesh
 
-- `#salishmesh`: general discussion, operators
-- `#bc`: regional general discussion
-- `#southisland`: greater Victoria area users and operators
+- `#salishmesh` — general discussion, operators
+- `#bc` — regional general discussion
+- `#southisland` — greater Victoria area users and operators
 - `#vancouver`
 - `#ubc`
-- `#bot-van`: some users in Vancouver operate a number of bots available here
-- `#testing`: if you want to test you new setup or play with bots
-- `#emergency`: reserved for emergency notification. Shared across PNW
+- `#bot-van` — bots operated by Vancouver users
+- `#testing` — test your new setup or play with bots
+- `#emergency` — reserved for emergency notification, shared across PNW
 
 ### How to add them
 
-If you see a hashtag in chat using the official app you can click it to join the
-channel.
+If you see a hashtag in chat in the official app, tap it to join. Otherwise:
 
-Otherwise you can join or even create your own:
-
-- Liam's App: click the three dot menu, top right, and click `add channel`
- then `join a hashtag channel`.
-- Meshcore Open: Navigate to the channels page, click the plus button, then
- `join a hashtag channel`.
+- **Liam's App:** tap the three-dot menu → `Add channel` → `Join a hashtag channel`
+- **MeshCore Open:** navigate to Channels → tap `+` → `Join a hashtag channel`
 
 ## What are regions?
 
-Regions are named scopes for traffic.
+Regions are named scopes for traffic. A user can scope a channel to a region — only repeaters that explicitly allow that region's flood traffic will forward it. This limits how far traffic spreads.
 
-A user can optionally scope their traffic for a given channel to a region.
+### Regions in use around Salish Mesh
 
-What this means is if a user say's scope the public channel to the region `#bc`,
-then only repeaters who explicitly allow flood traffic scoped the `#bc` will
-forward that traffic. In this way users and repeater operators can limit the
-area to which certain traffic will flood to.
+Most repeaters still allow un-scoped flood traffic, so scoping is optional for now. Active regions include: `#bc`, `#swbc`, `#southisland` and `#salishmesh`.
 
-### Regions in use around the Salish Mesh Area
+### How to set a region scope
 
-It's very early days and most repeaters still allow un-scoped flood traffic,
-which means you don't need to scope traffic yet. That said, a number of repeater
-owners have begun to experiment with regions and so far the following are
-allowed: `#bc`, `#swbc`, `#southisland` and `#salishmesh` but this one might
-not make sense with the others already covering most of it.
+Scope names must be lowercase, may start with `#`, and may contain numbers and `-`.
 
-### How to add a scope to a channel
-
-You can use anything you like for a scope, so you can have local area scopes
-between friends or neighboring repeaters etc. The scope may start with a `#`,
-and must be lower case and may contain numbers and `-`.
-
-- Liam's App: click the three dot menu, top right, and click `Set Region Scope`
- then add a scope if the one you want is not listed, otherwise click the scope
- you want to set. To remove the scope you can click the header where it shows
- the current scope and set it to `none`.
-- Meshcore Open: coming soon
+- **Liam's App:** three-dot menu → `Set Region Scope` → pick or add a scope. To remove, click the header showing the current scope and set to `none`.
+- **MeshCore Open:** coming soon.

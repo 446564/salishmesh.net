@@ -2,31 +2,57 @@
 layout: base.njk
 ---
 <main>
-  <div id="map"></div>
-  <script>
-  var map = L.map('map').setView([49, -123.5117], 8);
+  <div class="page-wrap">
+    <div class="page-header">
+      <h1>Coverage</h1>
+      <p class="page-subtitle">Prominent repeaters and live coverage across the Salish Sea region.</p>
+    </div>
 
-  var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(map);
+    {# ── Map card ── #}
+    <a href="https://swbc.meshmapper.net/?coverage-only" target="_blank" rel="noopener noreferrer" class="map-card-link">
+      <div class="map-card">
+        <div class="map-card-bg">
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0">
+            <defs>
+              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.15"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)"/>
+            <circle cx="52%" cy="48%" r="60" fill="none" stroke="currentColor" stroke-width="1" opacity="0.2" stroke-dasharray="6 4"/>
+            <circle cx="52%" cy="48%" r="100" fill="none" stroke="currentColor" stroke-width="1" opacity="0.12" stroke-dasharray="6 4"/>
+            <circle cx="52%" cy="48%" r="150" fill="none" stroke="currentColor" stroke-width="0.75" opacity="0.08" stroke-dasharray="6 4"/>
+            <circle cx="52%" cy="48%" r="5" fill="currentColor" opacity="0.35"/>
+            <circle cx="47%" cy="44%" r="5" fill="currentColor" opacity="0.35"/>
+            <circle cx="55%" cy="42%" r="5" fill="currentColor" opacity="0.35"/>
+            <circle cx="58%" cy="51%" r="5" fill="currentColor" opacity="0.35"/>
+            <circle cx="49%" cy="53%" r="5" fill="currentColor" opacity="0.35"/>
+            <circle cx="44%" cy="49%" r="5" fill="currentColor" opacity="0.35"/>
+            <circle cx="56%" cy="55%" r="5" fill="currentColor" opacity="0.35"/>
+          </svg>
+        </div>
+        <div class="map-card-content">
+          <div class="map-card-badge">Live Coverage Map</div>
+          <h3 class="map-card-title">Southwest BC — MeshMapper</h3>
+          <p class="map-card-desc">Interactive wardriving coverage map for the Salish Mesh region, powered by MeshMapper.</p>
+          <span class="map-card-btn">Open Coverage Map &rarr;</span>
+        </div>
+      </div>
+    </a>
 
-  {%- for repeater in repeaters %}
-    {%- if repeater.coverage and repeater.active -%}
-    var imageUrl = '/images/coverage/{{ repeater.coverage_overlay }}';
-    var altText = 'Coverage from {{ repeater.name }}';
-    var latLngBounds = L.latLngBounds([[{{ repeater.coverage_bounds[0][0] }}, {{ repeater.coverage_bounds[0][1] }}],[{{ repeater.coverage_bounds[1][0] }}, {{ repeater.coverage_bounds[1][1] }}]]);
+    {# ── Repeater grid ── #}
+    <h2 class="section-title">Repeaters</h2>
+    <div class="repeater-grid">
+      {% include "repeaters.njk" %}
+    </div>
 
-    var imageOverlay = L.imageOverlay(imageUrl, latLngBounds, {
-        opacity: 0.6,
-        alt: altText,
-        interactive: true
-    }).addTo(map);
-    {%- endif -%}
-  {%- endfor -%}
-
-  </script>
-  <article>
-    {{ content | safe }}
-  </article>
+    {# ── CTA ── #}
+    <div class="card" style="text-align:center;padding:2.5rem 2rem;margin-top:1rem">
+      <h3 style="margin-bottom:0.75rem">Help Improve Coverage</h3>
+      <p style="color:var(--text-muted);max-width:50ch;margin:0 auto 1.5rem">
+        Set up a repeater on your roof or in a tree, or report areas of spotty coverage you'd like to see expanded.
+      </p>
+      <a href="#" class="btn btn-primary protected-email" data-e="vasb@fnyvfuzrfu.arg">Get in touch &rarr;</a>
+    </div>
+  </div>
 </main>

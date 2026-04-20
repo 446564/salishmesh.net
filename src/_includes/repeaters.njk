@@ -1,8 +1,23 @@
-
-<ul>
 {%- for repeater in repeaters -%}
 {%- if repeater.active -%}
-  <li>{{ repeater.name }} - located {{ repeater.location }}</li>
+<div class="card repeater-card">
+  <div class="repeater-header">
+    <div class="repeater-name">
+      <span class="status-dot {% if repeater.active and repeater.coverage %}online{% else %}pending{% endif %}"></span>
+      {{ repeater.name | replace("(Soon)", "") | trim }}
+      {% if "(Soon)" in repeater.name %}<span class="badge-soon">Coming Soon</span>{% endif %}
+    </div>
+    <div class="repeater-location">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5z"/></svg>
+      {{ repeater.location }}
+    </div>
+  </div>
+  <div class="repeater-specs">
+    <div class="spec-row"><span>Hardware</span><span>{{ repeater.hardware.type }}</span></div>
+    <div class="spec-row"><span>Antenna</span><span>{{ repeater.hardware.antenna }}</span></div>
+    <div class="spec-row"><span>Power</span><span>{{ repeater.hardware.power }}</span></div>
+    <div class="spec-row"><span>Operator</span><span>{{ repeater.operator }}</span></div>
+  </div>
+</div>
 {%- endif -%}
 {%- endfor -%}
-</ul>
