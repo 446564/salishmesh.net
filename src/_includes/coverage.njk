@@ -5,7 +5,6 @@ layout: base.njk
   <div class="page-wrap">
     <div class="page-header">
       <h1>Coverage</h1>
-      <p class="page-subtitle">Notable repeaters in the Salish Mesh network. For real-world coverage data, see the live map below — coverage may extend beyond what's listed here.</p>
     </div>
 
     {# ── Map card ── #}
@@ -42,9 +41,36 @@ layout: base.njk
 
     {# ── Repeater grid ── #}
     <h2 class="section-title">Repeaters</h2>
-    <div class="repeater-grid">
-      {% include "repeaters.njk" %}
-    </div>
+    <a href="https://analyzer.cascadiamesh.org/#/map" target="_blank" rel="noopener noreferrer" class="map-card-link">
+      <div class="map-card">
+        <div class="map-card-bg">
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0">
+            <defs>
+              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.15"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)"/>
+            <circle cx="52%" cy="48%" r="60" fill="none" stroke="currentColor" stroke-width="1" opacity="0.2" stroke-dasharray="6 4"/>
+            <circle cx="52%" cy="48%" r="100" fill="none" stroke="currentColor" stroke-width="1" opacity="0.12" stroke-dasharray="6 4"/>
+            <circle cx="52%" cy="48%" r="150" fill="none" stroke="currentColor" stroke-width="0.75" opacity="0.08" stroke-dasharray="6 4"/>
+            <circle cx="52%" cy="48%" r="5" fill="currentColor" opacity="0.35"/>
+            <circle cx="47%" cy="44%" r="5" fill="currentColor" opacity="0.35"/>
+            <circle cx="55%" cy="42%" r="5" fill="currentColor" opacity="0.35"/>
+            <circle cx="58%" cy="51%" r="5" fill="currentColor" opacity="0.35"/>
+            <circle cx="49%" cy="53%" r="5" fill="currentColor" opacity="0.35"/>
+            <circle cx="44%" cy="49%" r="5" fill="currentColor" opacity="0.35"/>
+            <circle cx="56%" cy="55%" r="5" fill="currentColor" opacity="0.35"/>
+          </svg>
+        </div>
+        <div class="map-card-content">
+          <div class="map-card-badge">Live Node Map</div>
+          <h3 class="map-card-title">Cascadia Mesh Analyzer</h3>
+          <p class="map-card-desc">Interactive network map for the Cascadia region, powered by CoreScope.</p>
+          <span class="map-card-btn">Open Node Map &rarr;</span>
+        </div>
+      </div>
+    </a>
 
     {# ── CTA ── #}
     <h2 class="section-title">Help Improve Coverage</h2>
