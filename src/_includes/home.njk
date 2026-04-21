@@ -47,15 +47,15 @@ layout: base.njk
         <h3>MeshCore Network</h3>
         <p>Running on <a href="https://meshcore.io/" class="ext-link" target="_blank" rel="noopener">MeshCore</a> firmware with a link to <a href="https://pugetmesh.org/" class="ext-link" target="_blank" rel="noopener">Puget Mesh</a> — one big family.</p>
       </div>
-      <div class="card card-accent-top" id="network-status-card">
-        <div class="card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" fill-rule="evenodd">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5z" fill="currentColor"/>
-          </svg>
-        </div>
-        <h3><span class="status-dot" aria-hidden="true"></span>Network Status</h3>
-        <p class="mesh-summary" aria-live="polite">Checking status…</p>
-      </div>
+<div class="card card-accent-top" id="network-status-card">
+  <div class="card-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" fill-rule="evenodd">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5z" fill="currentColor"/>
+    </svg>
+  </div>
+  <h3><span class="status-dot" aria-hidden="true"></span>Network Status</h3>
+  <p class="mesh-summary" aria-live="polite">Checking status…</p>
+</div>
     </div>
   </div>
 </section>
@@ -112,28 +112,28 @@ layout: base.njk
 </section>
 
 <!-- begin network status api check --!>
-<script>
+<script type="module">
+  import { queryNetworkHealth } from '/scripts/corescope-network-health.js';
+
   (async function loadNetworkStatus() {
     const card = document.getElementById('network-status-card');
     const summaryEl = card.querySelector('.mesh-summary');
 
     try {
-      const res = await fetch('https://analyzer.cascadiamesh.org/api/nodes/network-status', {
-        headers: { 'Accept': 'application/json' },
-        cache: 'no-store'
+      const { total, degraded, byRole } = await queryNetworkHealth({
+        baseUrl: 'https://analyzer.ve7kod.ca',
+        regions: ['YVR', 'YYJ', 'YCD', 'YKA', 'VIC'], // adjust to the IATA codes you want covered
       });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
-      const { active = 0, total = 0, roleCounts = {} } = await res.json();
-
-      const healthyRatio = total > 0 ? active / total : 0;
+      const healthyRatio = total > 0 ? (total - degraded) / total : 0;
       card.dataset.status =
         healthyRatio >= 0.50 ? 'ok' :
         healthyRatio >= 0.25 ? 'degraded' :
                                'down';
 
       const fmt = n => n.toLocaleString();
-      const roleLabel = Object.entries(roleCounts)
+      const roleLabel = Object.entries(byRole)
+        .filter(([, count]) => count > 0)
         .sort(([, a], [, b]) => b - a)
         .map(([role, count]) => `${fmt(count)} ${role}${count === 1 ? '' : 's'}`)
         .join(' · ');

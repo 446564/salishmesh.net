@@ -6,8 +6,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/css/");
   eleventyConfig.addWatchTarget("./src/css/");
 
-  eleventyConfig.addPassthroughCopy("./src/images/coverage");
-  eleventyConfig.addWatchTarget("./src/images/coverage");
+  eleventyConfig.addPassthroughCopy("./src/scripts");
+  eleventyConfig.addWatchTarget("./src/scripts");
 
   eleventyConfig.addPassthroughCopy("./src/images/salishmesh-logo.svg");
 
