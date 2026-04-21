@@ -286,6 +286,29 @@ main { flex: 1; }
 .card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
 .card p { color: var(--text-muted); font-size: 0.9375rem; }
 
+/* ── Home network status card ──*/
+#network-status-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .status-dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background: #9ca3af;
+    flex-shrink: 0;
+  }
+  .mesh-summary {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  #network-status-card[data-status="ok"]       .status-dot { background: #10b981; }
+  #network-status-card[data-status="degraded"] .status-dot { background: #f59e0b; }
+  #network-status-card[data-status="down"]     .status-dot { background: #ef4444; }
+  #network-status-card[data-status="error"]    .status-dot { background: #6b7280; }
+
 /* ── Home: freq callout ── */
 .freq-card-label {
   font-size: 0.75rem; font-weight: 600;
