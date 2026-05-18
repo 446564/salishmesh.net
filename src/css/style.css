@@ -354,19 +354,19 @@ main { flex: 1; }
 .link-list-item svg { color: var(--accent); flex-shrink: 0; }
 .link-list-url { margin-left: auto; color: var(--text-muted); font-size: 0.8rem; }
 
-.discord-list { display: flex; flex-direction: column; gap: 0.5rem; }
-.discord-list-label {
+.community-chat-list { display: flex; flex-direction: column; gap: 0.5rem; }
+.community-chat-list-label {
   font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
-  letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.25rem;
+  letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.25rem; margin-top: 1.25rem;
 }
-.discord-item {
+.community-chat-item {
   display: flex; align-items: center; justify-content: space-between;
   padding: 0.55rem 0.75rem; border-radius: 8px;
   background: var(--surface2); text-decoration: none; color: var(--text);
   font-size: 0.875rem; transition: background 0.15s;
 }
-.discord-item:hover { background: var(--border); text-decoration: none; }
-.discord-note { font-size: 0.75rem; color: var(--text-muted); }
+.community-chat-item:hover { background: var(--border); text-decoration: none; }
+.community-chat-note { font-size: 0.75rem; color: var(--text-muted); }
 
 .contact-card .btn-primary { display: block; text-align: center; margin-bottom: 1.25rem; }
 
